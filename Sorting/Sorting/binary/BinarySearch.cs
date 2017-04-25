@@ -25,7 +25,7 @@ namespace Algorithms.binary
                     return guess;
                 }
 
-                if (guess < numberNeeded)
+                else if (guess < numberNeeded)
                 {
                     min = average + 1;
                 }
