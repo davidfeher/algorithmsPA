@@ -20,7 +20,7 @@ namespace Algorithms
                 myList.Add(rand.Next(1, 100));
             }
 
-            BubbleSort.quickSort(myList);
+            BubbleSort.bubbleSort(myList);
 
             foreach(int i in myList)
             {
@@ -32,9 +32,13 @@ namespace Algorithms
 
             List<int> unsortedList = new List<int> { 4, 6, 1, 2, 9, 25, 3 };
 
-            BubbleSort.quickSort(unsortedList);
+            BubbleSort.bubbleSort(unsortedList);
             unsortedList.ForEach(Console.WriteLine);
-            
+
+            unsortedList = new List<int> { 4, 6, 1, 2, 9, 25, 3 };
+            SelectionSort.selectionSort(unsortedList);
+            unsortedList.ForEach(Console.WriteLine);
+
         }
     }
 }
