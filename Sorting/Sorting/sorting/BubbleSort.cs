@@ -8,7 +8,7 @@ namespace Algorithms.sorting
 {
     class BubbleSort
     {
-        public static List<int> quickSort(List<int> unsortedList)
+        public static List<int> bubbleSort(List<int> unsortedList)
         {
            for (int i = 0; i < unsortedList.Count; i++)
             {
