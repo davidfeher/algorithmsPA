@@ -14,16 +14,20 @@ namespace Algorithms.sorting
             {
                 for (int j = 1; j < (unsortedList.Count-i); j++)
                 {
-                    int temp;
                     if (unsortedList[j-1] > unsortedList[j])
                     {
-                        temp = unsortedList[j-1];
-                        unsortedList[j-1] = unsortedList[j];
-                        unsortedList[j] = temp;
+                        BubbleSort.Swap(unsortedList, j, j-1);
                     }
                 }
             }
             return unsortedList;
+        }
+
+        private static void Swap(List<int> unsortedList, int firstIndex, int secondIndex)
+        {
+            int temp = unsortedList[secondIndex];
+            unsortedList[secondIndex] = unsortedList[firstIndex];
+            unsortedList[firstIndex] = temp;
         }
     }
 }
