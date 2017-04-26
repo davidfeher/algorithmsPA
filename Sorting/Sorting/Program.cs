@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms.sorting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Algorithms
                 myList.Add(rand.Next(1, 100));
             }
 
-            myList.Sort();
+            BubbleSort.quickSort(myList);
 
             foreach(int i in myList)
             {
@@ -28,6 +29,11 @@ namespace Algorithms
 
             binary.BinarySearch search = new binary.BinarySearch();
             Console.WriteLine(search.Search(myList, 70));
+
+            List<int> unsortedList = new List<int> { 4, 6, 1, 2, 9, 25, 3 };
+
+            BubbleSort.quickSort(unsortedList);
+            unsortedList.ForEach(Console.WriteLine);
             
         }
     }
